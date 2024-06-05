@@ -18,6 +18,7 @@ namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
             _httpClientFactory = httpClientFactory;
             _loginService = loginService;
         }
+        
         public async Task<IActionResult> ActiveAdverts()
         {
             var id = _loginService.GetUserId;
@@ -68,12 +69,12 @@ namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAdvert(CreateProductDto createProductDto)
         {
-            createProductDto.DealOfTheDay = false;
-            createProductDto.AdvertisementDate = DateTime.Now;
-            createProductDto.ProductStatus = true;
+            // createProductDto.DealOfTheDay = false;
+            // createProductDto.AdvertisementDate = DateTime.Now;
+            // createProductDto.ProductStatus = true;
 
             var id = _loginService.GetUserId;
-            createProductDto.EmployeeID = int.Parse(id);
+            // createProductDto.EmployeeID = int.Parse(id);
 
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createProductDto);

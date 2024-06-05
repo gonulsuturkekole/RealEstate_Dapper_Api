@@ -10,6 +10,7 @@ using System.Text.Json;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
+    [Route("account")]
     public class LoginController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -18,12 +19,13 @@ namespace RealEstate_Dapper_UI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        [HttpGet]
+        [HttpGet("login", Name = "LoginIndex")]
         public IActionResult Index()
         {
             return View();
         }
-        [HttpPost]
+
+        [HttpPost(Name = "LoginPost")]
         public async Task<IActionResult> Index(CreateLoginDto createLoginDto)
         {
             var client = _httpClientFactory.CreateClient();

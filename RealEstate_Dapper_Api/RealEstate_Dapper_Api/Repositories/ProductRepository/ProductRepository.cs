@@ -10,6 +10,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
     public class ProductRepository : IProductRepository
     {
         private readonly Context _context;
+
         public ProductRepository(Context context)
         {
             _context = context;
@@ -17,26 +18,52 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
 
         public async Task CreateProduct(CreateProductDto createProductDto)
         {
-            string query = "insert into Product (Title,Price,City,District,CoverImage,Address,Description,Type,DealOfTheDay,AdvertisementDate,ProductStatus,ProductCategory,EmployeeID) values (@Title,@Price,@City,@District,@ImageUrl,@Address,@Description,@Type,@DealOfTheDay,@AdvertisementDate,@ProductStatus,@ProductCategory,@EmployeeID)";
+            int productId = -1;
+            string query = "insert into Product (AdvertisementDate,Description,Title,Price,City,CoverImage,Address,Type,ProductCategory,CreatorUserId) values (@AdvertisementDate,@Description,@Title,@Price,@City,@CoverImage,@Address,@Type,@ProductCategory,@CreatorUserId); SELECT CAST(SCOPE_IDENTITY() as int)";
             var parameters = new DynamicParameters();
+            parameters.Add("@AdvertisementDate", DateTime.Now);
+            parameters.Add("@Description", createProductDto.Description);
             parameters.Add("@Title", createProductDto.Title);
             parameters.Add("@Price", createProductDto.Price);
             parameters.Add("@City", createProductDto.City);
-            parameters.Add("@District", createProductDto.District);
             parameters.Add("@CoverImage", createProductDto.CoverImage);
             parameters.Add("@Address", createProductDto.Address);
-            parameters.Add("@Description", createProductDto.Description);
             parameters.Add("@Type", createProductDto.Type);
-            parameters.Add("@DealOfTheDay", createProductDto.DealOfTheDay);
-            parameters.Add("@AdvertisementDate", createProductDto.AdvertisementDate);
-            parameters.Add("@ProductStatus", createProductDto.ProductStatus);
             parameters.Add("@ProductCategory", createProductDto.ProductCategory);
-            parameters.Add("@EmployeeID", createProductDto.EmployeeID);
+            parameters.Add("@CreatorUserId", createProductDto.CreatorUserId);
+            using (var connection = _context.CreateConnection())
+            {
+                productId = await connection.QuerySingleAsync<int>(query, parameters);
+            }
+
+            Random rnd = new Random();
+            var productSize = rnd.Next(50, 150);
+            var bedRoomCount = rnd.Next(1, 14);
+            var bathRoomCount = rnd.Next(1, 5);
+            var roomCount = rnd.Next(1, 30);
+            var garageSize = rnd.Next(10, 50);
+            DateTime start = new DateTime(1995, 1, 1);
+            int range = (DateTime.Today - start).Days;
+            var buildYear = start.AddDays(rnd.Next(range));
+
+            query = "insert into ProductDetails (ProductID, ProductSize, BedroomCount, BathroomCount, RoomCount, GarageSize, BuildYear, Price, Location, VideoUrl) values (@ProductId,@ProductSize,@BedroomCount,@BathroomCount,@RoomCount,@GarageSize,@BuildYear,@Price,@Location,@VideoUrl)";
+            parameters = new DynamicParameters();
+            parameters.Add("@ProductId", productId);
+            parameters.Add("@ProductSize", productSize);
+            parameters.Add("@BedroomCount", bedRoomCount);
+            parameters.Add("@BathroomCount", bathRoomCount);
+            parameters.Add("@RoomCount", roomCount);
+            parameters.Add("@GarageSize", garageSize);
+            parameters.Add("@BuildYear", buildYear);
+            parameters.Add("@Price", createProductDto.Price);
+            parameters.Add("@Location", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.3402720069224!2d28.99977205997432!3d41.0392320642639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7761a3b7de3%3A0xdcd33e38cf3b830b!2zRG9sbWFiYWjDp2UgU2FyYXnEsQ!5e0!3m2!1str!2str!4v1717452702992!5m2!1str!2str");
+            parameters.Add("@VideoUrl", "https://www.youtube.com/embed/XmIoYlTUAjQ");
             using (var connection = _context.CreateConnection())
             {
                 await connection.ExecuteAsync(query, parameters);
             }
         }
+
         public async Task<List<ResultProductDto>> GetAllProductAsync()
         {
             string query = "Select * From Product";
@@ -48,7 +75,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         }
         public async Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategoryAsync()
         {
-            string query = "Select ProductID,Title,Price,City,District,CategoryName,CoverImage,Type,Address,DealOfTheday From Product inner join Category on Product.ProductCategory=Category.CategoryID";
+            string query = "Select c.CategoryName, ProductID,Title,Price,City,CoverImage,Type,Address From Product AS p inner join Category AS c on p.ProductCategory=c.CategoryID";
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);

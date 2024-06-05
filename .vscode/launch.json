@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-api",
+            "program": "${workspaceFolder}/RealEstate_Dapper_Api/RealEstate_Dapper_Api/bin/Debug/net8.0/RealEstate_Dapper_Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RealEstate_Dapper_Api/RealEstate_Dapper_Api",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:5188;https://localhost:44345"
+            },
+        },
+        {
+            "name": "App",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-app",
+            "program": "${workspaceFolder}/RealEstate_Dapper_Api/RealEstate_Dapper_UI/bin/Debug/net8.0/RealEstate_Dapper_UI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RealEstate_Dapper_Api/RealEstate_Dapper_UI",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:5189;https://localhost:44378"
+            },
+        }
+    ]
+}

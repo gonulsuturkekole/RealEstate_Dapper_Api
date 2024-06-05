@@ -4,6 +4,7 @@ using RealEstate_Dapper_UI.Dtos.CategoryDtos;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
+    [Route("")]
     public class DefaultController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -11,6 +12,8 @@ namespace RealEstate_Dapper_UI.Controllers
         {
             _httpClientFactory = httpClientFactory;
         }
+        
+        [HttpGet("/", Name = "DefaultIndex")]
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
@@ -24,7 +27,7 @@ namespace RealEstate_Dapper_UI.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpGet("search")]
         public async Task<PartialViewResult> PartialSearch()
         {
             var client = _httpClientFactory.CreateClient();

@@ -20,10 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-lg-5 mr-auto">
                     <li class="nav-item @@home__active">
-                        <a class="nav-link" href="/Default/Index/">Ana Sayfa <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="@Url.RouteUrl("DefaultIndex")">Ana Sayfa <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item @@listing__active">
-                        <a class="nav-link" href="listing.html">İlanlar</a>
+                        <a class="nav-link" href="@Url.RouteUrl("Properties")">İlanlar</a>
                     </li>
                     <li class="nav-item dropdown @@property__active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -31,21 +31,21 @@
                             Fırsatlar <span class="fa fa-angle-down"></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item @@ps__active" href="property-single.html">Günün Fırsatı</a>
+                            <a class="dropdown-item @@ps__active" href="#">Günün Fırsatı</a>
                         </div>
                     </li>
                     <li class="nav-item @@listing__active">
-                        <a class="nav-link" href="listing.html">Hakkımızda</a>
+                        <a class="nav-link" href="#">Hakkımızda</a>
                     </li>
                     <li class="nav-item @@listing__active">
-                        <a class="nav-link" href="listing.html">Bize Yazın</a>
+                        <a class="nav-link" href="#">Bize Yazın</a>
                     </li>
                     <li class="nav-item @@listing__active">
-                        <a class="nav-link" href="listing.html">Giriş Yap</a>
+                        <a class="nav-link" href="@Url.RouteUrl("LoginIndex")">Giriş Yap</a>
                     </li>
                 </ul>
                 <div class="top-quote mt-lg-0">
-                    <a href="#buytheme" class="btn btn-style btn-primary">
+                    <a href="#" class="btn btn-style btn-primary">
                         <span class="fa fa-home"></span> İlan Ver
                     </a>
                 </div>
@@ -54,7 +54,7 @@
                     <input class="search_box" type="checkbox" id="search_box">
                     <label class="fa fa-search" for="search_box"></label>
                     <div class="search_form">
-                        <form action="error.html" method="GET">
+                        <form action="#" method="GET">
                             <input type="text" placeholder="Search"><input type="submit" value="search">
                         </form>
                     </div>

@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_UI\\RealEstate_Dapper_UI.csproj": {}
+    "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_UI/RealEstate_Dapper_UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api.csproj": {
+    "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api.csproj",
+        "projectUniqueName": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api.csproj",
         "projectName": "RealEstate_Dapper_Api",
-        "projectPath": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api.csproj",
-        "packagesPath": "C:\\Users\\gonul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\obj\\",
+        "projectPath": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api.csproj",
+        "packagesPath": "/Users/umutcomlekcioglu/.nuget/packages/",
+        "outputPath": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gonul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/umutcomlekcioglu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -82,41 +70,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_UI\\RealEstate_Dapper_UI.csproj": {
+    "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_UI/RealEstate_Dapper_UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_UI\\RealEstate_Dapper_UI.csproj",
+        "projectUniqueName": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_UI/RealEstate_Dapper_UI.csproj",
         "projectName": "RealEstate_Dapper_UI",
-        "projectPath": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_UI\\RealEstate_Dapper_UI.csproj",
-        "packagesPath": "C:\\Users\\gonul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_UI\\obj\\",
+        "projectPath": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_UI/RealEstate_Dapper_UI.csproj",
+        "packagesPath": "/Users/umutcomlekcioglu/.nuget/packages/",
+        "outputPath": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_UI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gonul\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/umutcomlekcioglu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api.csproj": {
-                "projectPath": "C:\\Users\\gonul\\OneDrive\\Masaüstü\\ders dosyaları\\acun medya js\\mvc\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api\\RealEstate_Dapper_Api.csproj"
+              "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api.csproj": {
+                "projectPath": "/Users/umutcomlekcioglu/sources/personal/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api/RealEstate_Dapper_Api.csproj"
               }
             }
           }
@@ -125,11 +106,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -143,6 +119,10 @@
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -168,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
