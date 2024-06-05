@@ -1,0 +1,43 @@
+﻿@model UpdateProductDto
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Product/Index.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="bg-light rounded h-100 p-4">
+                <h6 class="mb-4">Popüler Lokasyon Düzenleme Sayfası</h6>
+                <form method="post">
+                    <input type="hidden" asp-for="productID" />
+                    <label>Şehir Adı</label>
+                    <input type="text" asp-for="title" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="price" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="city" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="district" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="categoryName" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="coverImage" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="type" class="form-control" />
+                    <br />
+                    <label>Şehir Görsel</label>
+                    <input type="text" asp-for="address" class="form-control" />
+                    <br />
+                    <button class="btn btn-success">Lokasyonu Güncelle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
